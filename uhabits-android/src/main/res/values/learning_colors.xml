@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Stitch design tokens -->
+    <color name="learning_primary">#0D5C75</color>
+    <color name="learning_primary_dark">#0A4A5E</color>
+    <color name="learning_primary_soft">#E6F2F6</color>
+    <color name="learning_primary_soft_2">#D7EAF1</color>
+    <color name="learning_secondary">#1E293B</color>
+    <color name="learning_tertiary">#D97706</color>
+    <color name="learning_tertiary_soft">#FEF3C7</color>
+    <color name="learning_neutral">#64748B</color>
+    <color name="learning_neutral_soft">#F1F5F9</color>
+    <color name="learning_bg">#F4F7FA</color>
+    <color name="learning_surface">#FFFFFF</color>
+    <color name="learning_success">#15803D</color>
+    <color name="learning_success_soft">#DCFCE7</color>
+    <color name="learning_rest">#7C3AED</color>
+    <color name="learning_rest_soft">#EDE9FE</color>
+    <color name="learning_offline">#16A34A</color>
+    <color name="learning_divider">#E2E8F0</color>
+    <color name="learning_on_primary">#FFFFFF</color>
+    <color name="learning_heatmap_0">#E8EEF3</color>
+    <color name="learning_heatmap_1">#B7D5E0</color>
+    <color name="learning_heatmap_2">#6FA8BC</color>
+    <color name="learning_heatmap_3">#0D5C75</color>
+    <color name="learning_heatmap_4">#0A3D4F</color>
+</resources>

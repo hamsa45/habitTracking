@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_today"
+        android:icon="@drawable/ic_nav_today"
+        android:title="@string/learning_nav_today" />
+    <item
+        android:id="@+id/nav_plan"
+        android:icon="@drawable/ic_nav_plan"
+        android:title="@string/learning_nav_plan" />
+    <item
+        android:id="@+id/nav_topics"
+        android:icon="@drawable/ic_nav_topics"
+        android:title="@string/learning_nav_topics" />
+    <item
+        android:id="@+id/nav_history"
+        android:icon="@drawable/ic_nav_history"
+        android:title="@string/learning_nav_history" />
+    <item
+        android:id="@+id/nav_more"
+        android:icon="@drawable/ic_nav_more"
+        android:title="@string/learning_nav_more" />
+</menu>

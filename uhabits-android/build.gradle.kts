@@ -122,6 +122,7 @@ dependencies {
     implementation(libs.legacy.preference.v14)
     implementation(libs.legacy.support.v4)
     implementation(libs.material)
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation(libs.documentfile)
     implementation(libs.opencsv)
     implementation(libs.konfetti.xml)

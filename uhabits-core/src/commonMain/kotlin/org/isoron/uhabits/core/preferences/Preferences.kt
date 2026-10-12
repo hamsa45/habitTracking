@@ -218,6 +218,83 @@ open class Preferences(private val storage: Storage) {
             for (l in listeners) l.onQuestionMarksChanged()
         }
 
+    // --- Java Learning Accountability settings ---
+
+    open var dailyStudyTargetMinutes: Int
+        get() = storage.getInt("pref_learning_daily_target_minutes", 45).coerceAtLeast(1)
+        set(value) {
+            storage.putInt("pref_learning_daily_target_minutes", value.coerceAtLeast(1))
+        }
+
+    open var minStudySessionMinutes: Int
+        get() = storage.getInt("pref_learning_min_session_minutes", 10).coerceAtLeast(1)
+        set(value) {
+            storage.putInt("pref_learning_min_session_minutes", value.coerceAtLeast(1))
+        }
+
+    open var requireMeaningfulNoteForCompletion: Boolean
+        get() = storage.getBoolean("pref_learning_require_meaningful_note", true)
+        set(value) {
+            storage.putBoolean("pref_learning_require_meaningful_note", value)
+        }
+
+    open var studyReminderEnabled: Boolean
+        get() = storage.getBoolean("pref_learning_reminder_enabled", true)
+        set(value) {
+            storage.putBoolean("pref_learning_reminder_enabled", value)
+            for (l in listeners) l.onNotificationsChanged()
+        }
+
+    open var studyReminderHour: Int
+        get() = storage.getInt("pref_learning_reminder_hour", 21).coerceIn(0, 23)
+        set(value) {
+            storage.putInt("pref_learning_reminder_hour", value.coerceIn(0, 23))
+            for (l in listeners) l.onNotificationsChanged()
+        }
+
+    open var studyReminderMinute: Int
+        get() = storage.getInt("pref_learning_reminder_minute", 0).coerceIn(0, 59)
+        set(value) {
+            storage.putInt("pref_learning_reminder_minute", value.coerceIn(0, 59))
+            for (l in listeners) l.onNotificationsChanged()
+        }
+
+    /** Bitmask Sunday=1<<0 ... Saturday=1<<6; default all days. */
+    open var studyReminderDaysMask: Int
+        get() = storage.getInt("pref_learning_reminder_days", 0b1111111)
+        set(value) {
+            storage.putInt("pref_learning_reminder_days", value)
+            for (l in listeners) l.onNotificationsChanged()
+        }
+
+    open var studySecondReminderEnabled: Boolean
+        get() = storage.getBoolean("pref_learning_second_reminder_enabled", true)
+        set(value) {
+            storage.putBoolean("pref_learning_second_reminder_enabled", value)
+            for (l in listeners) l.onNotificationsChanged()
+        }
+
+    /** Minutes after the primary reminder for the incomplete-day nudge. */
+    open var studySecondReminderOffsetMinutes: Int
+        get() = storage.getInt("pref_learning_second_reminder_offset", 60).coerceAtLeast(15)
+        set(value) {
+            storage.putInt("pref_learning_second_reminder_offset", value.coerceAtLeast(15))
+            for (l in listeners) l.onNotificationsChanged()
+        }
+
+    open var weeklyReviewReminderEnabled: Boolean
+        get() = storage.getBoolean("pref_learning_weekly_review_reminder", true)
+        set(value) {
+            storage.putBoolean("pref_learning_weekly_review_reminder", value)
+            for (l in listeners) l.onNotificationsChanged()
+        }
+
+    open var learningPlanSeeded: Boolean
+        get() = storage.getBoolean("pref_learning_plan_seeded", false)
+        set(value) {
+            storage.putBoolean("pref_learning_plan_seeded", value)
+        }
+
     /**
      * @return An integer representing the first day of the week. Sunday
      * corresponds to 1, Monday to 2, and so on, until Saturday, which is

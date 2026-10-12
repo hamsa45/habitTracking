@@ -97,6 +97,7 @@ class ReminderReceiver : BroadcastReceiver() {
                 Intent.ACTION_BOOT_COMPLETED -> {
                     Log.d("ReminderReceiver", "onBootCompleted")
                     reminderController.onBootCompleted()
+                    org.isoron.uhabits.notifications.StudyReminderScheduler(context).scheduleAll()
                 }
             }
         } catch (e: RuntimeException) {

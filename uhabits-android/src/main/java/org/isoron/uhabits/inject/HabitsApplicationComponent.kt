@@ -33,6 +33,7 @@ import org.isoron.uhabits.core.models.HabitList
 import org.isoron.uhabits.core.models.ModelFactory
 import org.isoron.uhabits.core.models.sqlite.SQLModelFactory
 import org.isoron.uhabits.core.models.sqlite.SQLiteHabitList
+import org.isoron.uhabits.core.learning.LearningFacade
 import org.isoron.uhabits.core.preferences.Preferences
 import org.isoron.uhabits.core.preferences.WidgetPreferences
 import org.isoron.uhabits.core.reminders.ReminderScheduler
@@ -82,12 +83,17 @@ abstract class HabitsApplicationComponent(
     abstract val taskRunner: TaskRunner
     abstract val widgetPreferences: WidgetPreferences
     abstract val widgetUpdater: WidgetUpdater
+    abstract val learningFacade: LearningFacade
 
     val db: AndroidDatabase
         get() = providedDb
 
     private val providedDb: AndroidDatabase by lazy {
         AndroidDatabase(DatabaseUtils.openDatabase())
+    }
+
+    private val providedLearningFacade: LearningFacade by lazy {
+        LearningFacade(providedDb, preferences)
     }
 
     @AppScope
@@ -147,4 +153,8 @@ abstract class HabitsApplicationComponent(
     @Provides
     open fun fileOpener(): FileOpener =
         AndroidFileOpener(appContext.assets, appContext.filesDir)
+
+    @AppScope
+    @Provides
+    open fun learningFacade(): LearningFacade = providedLearningFacade
 }

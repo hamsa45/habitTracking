@@ -47,6 +47,37 @@
             android:value="AEdPqrEAAAAI6aeWncbnMNo8E5GWeZ44dlc5cQ7tCROwFhOtiw" />
 
         <activity
+            android:name=".activities.learning.LearningMainActivity"
+            android:exported="true"
+            android:label="@string/main_activity_title"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.JavaLearning" />
+
+        <activity
+            android:name=".activities.learning.StudySessionActivity"
+            android:label="@string/learning_start_studying"
+            android:parentActivityName=".activities.learning.LearningMainActivity"
+            android:theme="@style/Theme.JavaLearning" />
+
+        <activity
+            android:name=".activities.learning.WeeklyReviewActivity"
+            android:label="@string/learning_weekly_review"
+            android:parentActivityName=".activities.learning.LearningMainActivity"
+            android:theme="@style/Theme.JavaLearning" />
+
+        <activity
+            android:name=".activities.learning.LearningSettingsActivity"
+            android:label="@string/learning_settings"
+            android:parentActivityName=".activities.learning.LearningMainActivity"
+            android:theme="@style/Theme.JavaLearning" />
+
+        <activity
+            android:name=".activities.learning.TopicDetailActivity"
+            android:label="@string/learning_topics_title"
+            android:parentActivityName=".activities.learning.LearningMainActivity"
+            android:theme="@style/Theme.JavaLearning" />
+
+        <activity
             android:name=".activities.habits.list.ListHabitsActivity"
             android:exported="true"
             android:label="@string/main_activity_title"
@@ -57,7 +88,7 @@
             android:exported="true"
             android:label="@string/main_activity_title"
             android:launchMode="singleTop"
-            android:targetActivity=".activities.habits.list.ListHabitsActivity">
+            android:targetActivity=".activities.learning.LearningMainActivity">
             <intent-filter android:label="@string/main_activity_title">
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -215,6 +246,16 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".receivers.StudyReminderReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
             </intent-filter>
         </receiver>
 

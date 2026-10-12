@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/learning_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <include
+            android:id="@+id/moreHeader"
+            layout="@layout/include_learning_header" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/moreWeeklyReviewButton"
+            style="@style/Widget.JavaLearning.Button.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="start|center_vertical"
+            android:paddingHorizontal="18dp"
+            android:text="@string/learning_weekly_review" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/moreLearningSettingsButton"
+            style="@style/Widget.JavaLearning.Button.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start|center_vertical"
+            android:paddingHorizontal="18dp"
+            android:text="@string/learning_settings" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/moreAppSettingsButton"
+            style="@style/Widget.JavaLearning.Button.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start|center_vertical"
+            android:paddingHorizontal="18dp"
+            android:text="@string/settings" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/moreHabitsButton"
+            style="@style/Widget.JavaLearning.Button.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start|center_vertical"
+            android:paddingHorizontal="18dp"
+            android:text="@string/learning_open_habits" />
+    </LinearLayout>
+</ScrollView>

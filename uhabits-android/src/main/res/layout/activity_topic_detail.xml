@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/topicNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceHeadlineSmall"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/topicCategoryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+        <Spinner
+            android:id="@+id/topicStatusSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/learning_mastery_checklist"
+            android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+        <CheckBox android:id="@+id/mastery0" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/learning_mastery_0" />
+        <CheckBox android:id="@+id/mastery1" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/learning_mastery_1" />
+        <CheckBox android:id="@+id/mastery2" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/learning_mastery_2" />
+        <CheckBox android:id="@+id/mastery3" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/learning_mastery_3" />
+        <CheckBox android:id="@+id/mastery4" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/learning_mastery_4" />
+
+        <EditText
+            android:id="@+id/topicNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/learning_topic_notes"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minHeight="96dp" />
+
+        <TextView
+            android:id="@+id/topicRevisionsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/topicSaveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:minHeight="48dp"
+            android:text="@string/save" />
+    </LinearLayout>
+</ScrollView>

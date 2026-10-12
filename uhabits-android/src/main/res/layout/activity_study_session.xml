@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/sessionTopicText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceHeadlineSmall"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/learning_objective"
+            android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+        <Spinner
+            android:id="@+id/sessionTaskSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/sessionCustomObjective"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/learning_custom_objective_hint"
+            android:inputType="textCapSentences"
+            android:maxLength="500"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/sessionTimerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="00:00"
+            android:textAppearance="?attr/textAppearanceDisplayMedium"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sessionPauseButton"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                android:text="@string/learning_pause" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sessionFinishButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                android:text="@string/learning_finish" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sessionSaveForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/learning_save_session_title"
+                android:textAppearance="?attr/textAppearanceTitleLarge" />
+
+            <EditText
+                android:id="@+id/sessionLearned"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/learning_what_learned"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLength="2000"
+                android:minHeight="72dp" />
+
+            <EditText
+                android:id="@+id/sessionAttempted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/learning_what_attempted"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLength="2000"
+                android:minHeight="72dp" />
+
+            <EditText
+                android:id="@+id/sessionUnclear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/learning_still_unclear"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLength="2000"
+                android:minHeight="72dp" />
+
+            <EditText
+                android:id="@+id/sessionNextAction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/learning_what_next"
+                android:inputType="textCapSentences"
+                android:maxLength="500"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/sessionDurationMinutes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/learning_duration_minutes"
+                android:inputType="number"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/sessionValidationError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="#B00020"
+                android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sessionSaveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:minHeight="48dp"
+                android:text="@string/learning_save_session" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

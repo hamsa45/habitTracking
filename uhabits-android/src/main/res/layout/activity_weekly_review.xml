@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/weeklySummaryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBodyLarge" />
+
+        <EditText android:id="@+id/weeklyQ1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:hint="@string/learning_review_q1" android:inputType="textMultiLine|textCapSentences" android:maxLength="2000" android:minHeight="72dp" />
+        <EditText android:id="@+id/weeklyQ2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="@string/learning_review_q2" android:inputType="textMultiLine|textCapSentences" android:maxLength="2000" android:minHeight="72dp" />
+        <EditText android:id="@+id/weeklyQ3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="@string/learning_review_q3" android:inputType="textMultiLine|textCapSentences" android:maxLength="2000" android:minHeight="72dp" />
+        <EditText android:id="@+id/weeklyQ4" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="@string/learning_review_q4" android:inputType="textMultiLine|textCapSentences" android:maxLength="2000" android:minHeight="72dp" />
+        <EditText android:id="@+id/weeklyQ5" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="@string/learning_review_q5" android:inputType="textMultiLine|textCapSentences" android:maxLength="2000" android:minHeight="72dp" />
+        <EditText android:id="@+id/weeklyQ6" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="@string/learning_review_q6" android:inputType="textCapSentences" android:maxLength="500" android:minHeight="48dp" />
+        <EditText android:id="@+id/weeklyQ7" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="@string/learning_review_q7" android:inputType="textCapSentences" android:maxLength="500" android:minHeight="48dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/weeklySaveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:minHeight="48dp"
+            android:text="@string/learning_save_review" />
+    </LinearLayout>
+</ScrollView>
